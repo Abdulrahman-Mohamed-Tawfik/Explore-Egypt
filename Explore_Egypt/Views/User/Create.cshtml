@@ -1,0 +1,79 @@
+﻿@model UserViewModel
+
+<div class="card shadow border-0 my-4">
+	<div class="card-header border bg-secondary bg-gradient ml-0 py-3">
+		<div class="row">
+			<div class="col-12 text-center">
+				<h2 class="text-wide text-light py-2">Add New User</h2>
+			</div>
+		</div>
+	</div>
+	<div class="card-body p-4">
+		<form method="post" class="row" enctype="multipart/form-data">
+			<input asp-for="User.Id" hidden />
+			<div class="row">
+				<div class="col-12">
+					<div asp-validation-summary="All" class="text-danger"></div>
+					<div class="border p-3">
+						<div class="form-floating py-2 col-12">
+							<input asp-for="User.FirstName" class="form-control border-0 shadow" placeholder="" />
+							<label asp-for="User.FirstName" class="ms-2"></label>
+							<span asp-validation-for="User.FirstName" class="text-danger"></span>
+						</div>
+						<div class="form-floating py-2 col-12">
+							<input asp-for="User.LastName" class="form-control border-0 shadow" placeholder="" />
+							<label asp-for="User.LastName" class="ms-2"></label>
+							<span asp-validation-for="User.LastName" class="text-danger"></span>
+						</div>
+						<div class="form-floating py-2 col-12">
+							<input asp-for="User.Email" class="form-control border-0 shadow" placeholder="" />
+							<label asp-for="User.Email" class="ms-2"></label>
+							<span asp-validation-for="User.Email" class="text-danger"></span>
+						</div>
+						<div class="form-floating py-2 col-12">
+							<input asp-for="User.UserName" class="form-control border-0 shadow" placeholder=""/>
+							<label asp-for="User.UserName" class="ms-2"></label>
+							<span asp-validation-for="User.UserName" class="text-danger"></span>
+						</div>
+						<div class="form-floating py-2 col-12">
+							<input asp-for="Password" class="form-control border-0 shadow" placeholder="password" />
+							<label asp-for="Password" class="ms-2"></label>
+							<span asp-validation-for="Password" class="text-danger"></span>
+						</div>
+						<div class="form-floating py-2 col-12">
+							<input asp-for="User.Country" class="form-control border-0 shadow" />
+							<label asp-for="User.Country" class="ms-2"></label>
+							<span asp-validation-for="User.Country" class="text-danger"></span>
+						</div>
+						<div class="form-floating py-2 col-12">
+							<select asp-for="RoleId" asp-items="@Model.RolesList" class="form-select border-0 shadow">
+								<option disabled selected>-- Select Category --</option>
+							</select>
+							<label asp-for="RoleId" class="ms-2"></label>
+							<span asp-validation-for="RoleId" class="text-danger"></span>
+						</div>
+
+						<div class="row pt-2">
+							<div class="col-6 col-md-3">
+								<button type="submit" class="btn btn-primary form-control">Add</button>
+							</div>
+							<div class="col-6 col-md-3">
+								<a asp-controller="User" asp-action="Index" class="btn btn-outline-primary border form-control">Back to list</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</form>
+	</div>
+</div>
+
+@section Scripts {
+	@{
+		<partial name="_ValidationScriptsPartial" />
+
+	}
+
+}

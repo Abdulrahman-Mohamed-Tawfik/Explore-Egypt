@@ -1,0 +1,125 @@
+﻿@model Landmark
+
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-3">
+    <div class="row">
+        <div class="col-12 text-center">
+                <h2 class="text-white py-2">Create Landmark</h2>
+        </div>
+    </div>
+    </div>
+    <div class="card-body p-4">
+        <form method="post" class="row">
+            <div class="border p-3">
+                <div asp-validation-summary="All"></div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="Name" class="form-control border-0 shadow" />
+                    <label asp-for="Name" class="ms-2"></label>
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+               @*  <div class="form-floating py-2 col-12">
+                    <input asp-for="Description" class="form-control border-0 shadow" />
+                    <label asp-for="Description" class="ms-2"></label>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div> *@
+                <div class=" py-2 col-12">
+                    <label asp-for="Description" class="ms-2 text-muted"></label>
+                    <textarea asp-for="Description" class="form-control border-0 shadow"></textarea>
+                </div>
+                @* <div class="form-floating py-2 col-12 ">
+                    <input asp-for="OpenTime" class="form-control border-0 shadow" />
+                    <label asp-for="OpenTime" class="ms-2">Open time</label>
+                    <span asp-validation-for="OpenTime" class="text-danger"></span>
+                </div> *@
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="OpenTime" class="form-control border-0 shadow" id="openTime" />
+                    <label asp-for="OpenTime" class="ms-2">Open time</label>
+                    <span asp-validation-for="OpenTime" class="text-danger"></span>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="CloseTime" class="form-control border-0 shadow" id="closeTime"/>
+                    <label asp-for="CloseTime" class="ms-2">Close time</label>
+                    <span asp-validation-for="CloseTime" class="text-danger"></span>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="Latitude" class="form-control border-0 shadow" />
+                    <label asp-for="Latitude" class="ms-2"></label>
+                    <span asp-validation-for="Latitude" class="text-danger"></span>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="Longitude " class="form-control border-0 shadow" />
+                    <label asp-for="Longitude" class="ms-2"></label>
+                    <span asp-validation-for="Longitude" class="text-danger"></span>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="EgyptianTicketPrice" class="form-control border-0 shadow" />
+                    <label asp-for="EgyptianTicketPrice" class="ms-2"></label>
+                    <span asp-validation-for="EgyptianTicketPrice" class="text-danger"></span>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="EgyptianStudentTicketPrice" class="form-control border-0 shadow" />
+                    <label asp-for="EgyptianStudentTicketPrice" class="ms-2"></label>
+                    <span asp-validation-for="EgyptianStudentTicketPrice" class="text-danger"></span>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="ForeignTicketPrice" class="form-control border-0 shadow" />
+                    <label asp-for="ForeignTicketPrice" class="ms-2"></label>
+                    <span asp-validation-for="ForeignTicketPrice" class="text-danger"></span>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="ForeignStudentTicketPrice" class="form-control border-0 shadow" />
+                    <label asp-for="ForeignStudentTicketPrice" class="ms-2"></label>
+                    <span asp-validation-for="ForeignStudentTicketPrice" class="text-danger"></span>
+                </div>
+
+                <div class="row pt-2">
+                    <div class="col-6 col-md-3">
+                        <button type="submit" class="btn btn-primary form-control">Create</button>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <a asp-controller="Landmark" asp-action="Index" class="btn btn-outline-primary border  form-control">
+                            Back to List
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'anchor autolink charmap codesample emoticons lists  table visualblocks wordcount',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | align lineheight | tinycomments | checklist numlist bullist indent outdent ',
+            tinycomments_mode: 'embedded',
+            tinycomments_author: 'Author name',
+            mergetags_list: [
+                { value: 'First.Name', title: 'First Name' },
+                { value: 'Email', title: 'Email' },
+            ],
+            ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
+        });
+
+        flatpickr('#openTime', {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+        });
+        flatpickr('#closeTime', {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+        });
+    </script>
+    
+    @{
+        <partial name="_ValidationScriptsPartial"/>
+    }
+}
