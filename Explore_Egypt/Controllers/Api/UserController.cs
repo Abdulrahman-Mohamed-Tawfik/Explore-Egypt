@@ -42,7 +42,8 @@ namespace Explore_Egypt.Controllers.Api
 				UserName = user.UserName,
 				Email = user.Email,
 				Country = user.Country,
-				Roles = _userManager.GetRolesAsync(user).Result
+				Password = "########",
+				Roles = _userManager.GetRolesAsync(user).GetAwaiter().GetResult()
 			}).ToListAsync();
 			return Ok(new { data = users });
 		}
@@ -142,6 +143,7 @@ namespace Explore_Egypt.Controllers.Api
 					FirstName = user.FirstName, 
 					LastName = user.LastName,
 					Country = user.Country,
+					Password = "########",
 					Roles = _userManager.GetRolesAsync(user).Result
 				};
 				return Ok(userDto);
@@ -217,5 +219,29 @@ namespace Explore_Egypt.Controllers.Api
 			return Ok();
 		}
 
-	}
+        //https://localhost:44316/api/user
+        [HttpPut(Name = "UpdateUser")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> UpdateUser([FromBody] UserDto userDto)
+        {
+            if(userDto == null)
+				return BadRequest();
+			
+			var user = await _userManager.FindByIdAsync(userDto.Id);
+			if (user == null)
+				return NotFound();
+
+			user.FirstName = userDto.FirstName;
+			user.LastName = userDto.LastName;
+			user.Country = userDto.Country;
+			user.UserName = userDto.UserName;
+
+			await _userManager.UpdateAsync(user);
+
+			return NoContent();
+        }
+
+    }
 }
