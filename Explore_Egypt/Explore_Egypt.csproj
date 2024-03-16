@@ -27,4 +27,8 @@
     <ProjectReference Include="..\Explore_Egypt.Models\Explore_Egypt.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\landmarkImages\" />
+  </ItemGroup>
+
 </Project>
