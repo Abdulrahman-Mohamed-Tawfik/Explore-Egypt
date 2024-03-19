@@ -86,6 +86,27 @@ namespace Explore_Egypt.DataAccess.Data
 		, OpenTime = TimeOnly.Parse("09:00:00"), CloseTime = TimeOnly.Parse("00:00:00"), Latitude = 30.0459258601981, Longitude = 31.2242886061951, EgyptianTicketPrice = 70.0m, EgyptianStudentTicketPrice = 70.0m, ForeignTicketPrice = 250.0m, ForeignStudentTicketPrice = 250.0m }
          );
 
+            modelBuilder.Entity<LandmarkImage>().HasData(
+                new LandmarkImage { Id = 1, LandmarkId = 1, Url = @"\landmarkImages\Abdeen_Palace\1.jpg" },
+                new LandmarkImage { Id = 2, LandmarkId = 1, Url = @"\landmarkImages\Abdeen_Palace\2.jpg" },
+				new LandmarkImage { Id = 3, LandmarkId = 2, Url = @"\landmarkImages\Abu_Simbel\1.jpg" },
+				new LandmarkImage { Id = 4, LandmarkId = 2, Url = @"\landmarkImages\Abu_Simbel\2.jpg" },
+				new LandmarkImage { Id = 5, LandmarkId = 3, Url = @"\landmarkImages\Alexandria_National_Museum\1.jpg" },
+				new LandmarkImage { Id = 6, LandmarkId = 3, Url = @"\landmarkImages\Alexandria_National_Museum\2.jpg" },
+				new LandmarkImage { Id = 7, LandmarkId = 4, Url = @"\landmarkImages\Amir_Taz_Palace\1.jpg" },
+				new LandmarkImage { Id = 8, LandmarkId = 4, Url = @"\landmarkImages\Amir_Taz_Palace\2.jpg" },
+				new LandmarkImage { Id = 9, LandmarkId = 5, Url = @"\landmarkImages\Amr_Ibn_Al-As\1.jpg" },
+				new LandmarkImage { Id = 10, LandmarkId = 5, Url = @"\landmarkImages\Amr_Ibn_Al-As\2.jpg" },
+				new LandmarkImage { Id = 11, LandmarkId = 6, Url = @"\landmarkImages\Aswan_Museum\1.jpeg" },
+				new LandmarkImage { Id = 12, LandmarkId = 6, Url = @"\landmarkImages\Aswan_Museum\2.jpeg" },
+				new LandmarkImage { Id = 13, LandmarkId = 7, Url = @"\landmarkImages\Bab-al-Futuh\1.jpg" },
+				new LandmarkImage { Id = 14, LandmarkId = 7, Url = @"\landmarkImages\Bab-al-Futuh\2.jpeg" },
+				new LandmarkImage { Id = 15, LandmarkId = 8, Url = @"\landmarkImages\Bab-Zuweila\1.jpg" },
+				new LandmarkImage { Id = 16, LandmarkId = 8, Url = @"\landmarkImages\Bab-Zuweila\2.jpg" },
+				new LandmarkImage { Id = 17, LandmarkId = 9, Url = @"\landmarkImages\Baron_Empain_Palace\1.jpg" },
+				new LandmarkImage { Id = 18, LandmarkId = 10, Url = @"\landmarkImages\Cairo_Tower\1.jpg" },
+				new LandmarkImage { Id = 19, LandmarkId = 10, Url = @"\landmarkImages\Cairo_Tower\2.jpg" }
+				);
 
             //modelBuilder.Entity<Landmark>().HasNoKey();
         }
