@@ -6,9 +6,12 @@ using Explore_Egypt.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews().AddRazorPagesOptions(options => {
+builder.Services.AddControllersWithViews()
+    .AddRazorPagesOptions(options => {
     options.Conventions.AddAreaPageRoute("Identity", "/Account/Login", "");
-}); 
+    }).AddNewtonsoftJson(options =>
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+); 
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

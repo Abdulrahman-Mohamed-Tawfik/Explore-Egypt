@@ -1,7 +1,9 @@
 ﻿using Explore_Egypt.DataAccess.Data;
+using Explore_Egypt.DataAccess.Dto;
 using Explore_Egypt.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Text;
 
 namespace Explore_Egypt.Controllers.Api
@@ -20,7 +22,9 @@ namespace Explore_Egypt.Controllers.Api
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		public ActionResult<IEnumerable<Landmark>> GetLandmarks()
 		{
-			List<Landmark> objLandmarkList = _context.Landmarks.ToList();
+			List<Landmark> objLandmarkList = _context.Landmarks
+				.Include(x => x.Images)
+				.ToList();
 			return Ok(new { data = objLandmarkList });
 		}
 
@@ -39,7 +43,23 @@ namespace Explore_Egypt.Controllers.Api
 			if (landmark == null)
 				return NotFound();
 
-			return Ok(new { data = landmark });
+			var landmarkDto = new LandmarkDto
+			{
+				Id = landmark.Id,
+				Name = landmark.Name,
+				Description = landmark.Description,
+				EgyptianStudentTicketPrice = landmark.EgyptianStudentTicketPrice,
+				EgyptianTicketPrice = landmark.EgyptianTicketPrice,
+				ForeignStudentTicketPrice = landmark.ForeignStudentTicketPrice,
+				ForeignTicketPrice = landmark.ForeignTicketPrice,
+				OpenTime = landmark.OpenTime,
+				CloseTime = landmark.CloseTime,
+				Latitude = landmark.Latitude,
+				Longitude = landmark.Longitude,
+				ImagesUrl = _context.LandmarkImages.Where(x => x.LandmarkId == landmark.Id).Select(x => x.Url).ToList()
+			};
+
+			return Ok(new { data = landmarkDto });
 		}
 
 		[HttpDelete]
