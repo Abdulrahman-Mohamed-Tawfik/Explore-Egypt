@@ -4,6 +4,7 @@ using Explore_Egypt.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Explore_Egypt.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240317154331_Added10rowsLandmark")]
+    partial class Added10rowsLandmark
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -320,122 +323,6 @@ namespace Explore_Egypt.DataAccess.Migrations
                     b.HasIndex("LandmarkId");
 
                     b.ToTable("LandmarkImages");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            LandmarkId = 1,
-                            Url = "\\landmarkImages\\Abdeen_Palace\\1.jpg"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            LandmarkId = 1,
-                            Url = "\\landmarkImages\\Abdeen_Palace\\2.jpg"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            LandmarkId = 2,
-                            Url = "\\landmarkImages\\Abu_Simbel\\1.jpg"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            LandmarkId = 2,
-                            Url = "\\landmarkImages\\Abu_Simbel\\2.jpg"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            LandmarkId = 3,
-                            Url = "\\landmarkImages\\Alexandria_National_Museum\\1.jpg"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            LandmarkId = 3,
-                            Url = "\\landmarkImages\\Alexandria_National_Museum\\2.jpg"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            LandmarkId = 4,
-                            Url = "\\landmarkImages\\Amir_Taz_Palace\\1.jpg"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            LandmarkId = 4,
-                            Url = "\\landmarkImages\\Amir_Taz_Palace\\2.jpg"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            LandmarkId = 5,
-                            Url = "\\landmarkImages\\Amr_Ibn_Al-As\\1.jpg"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            LandmarkId = 5,
-                            Url = "\\landmarkImages\\Amr_Ibn_Al-As\\2.jpg"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            LandmarkId = 6,
-                            Url = "\\landmarkImages\\Aswan_Museum\\1.jpeg"
-                        },
-                        new
-                        {
-                            Id = 12,
-                            LandmarkId = 6,
-                            Url = "\\landmarkImages\\Aswan_Museum\\2.jpeg"
-                        },
-                        new
-                        {
-                            Id = 13,
-                            LandmarkId = 7,
-                            Url = "\\landmarkImages\\Bab-al-Futuh\\1.jpg"
-                        },
-                        new
-                        {
-                            Id = 14,
-                            LandmarkId = 7,
-                            Url = "\\landmarkImages\\Bab-al-Futuh\\2.jpeg"
-                        },
-                        new
-                        {
-                            Id = 15,
-                            LandmarkId = 8,
-                            Url = "\\landmarkImages\\Bab-Zuweila\\1.jpg"
-                        },
-                        new
-                        {
-                            Id = 16,
-                            LandmarkId = 8,
-                            Url = "\\landmarkImages\\Bab-Zuweila\\2.jpg"
-                        },
-                        new
-                        {
-                            Id = 17,
-                            LandmarkId = 9,
-                            Url = "\\landmarkImages\\Baron_Empain_Palace\\1.jpg"
-                        },
-                        new
-                        {
-                            Id = 18,
-                            LandmarkId = 10,
-                            Url = "\\landmarkImages\\Cairo_Tower\\1.jpg"
-                        },
-                        new
-                        {
-                            Id = 19,
-                            LandmarkId = 10,
-                            Url = "\\landmarkImages\\Cairo_Tower\\2.jpg"
-                        });
                 });
 
             modelBuilder.Entity("Explore_Egypt.Models.SearchHistory", b =>
