@@ -11,18 +11,25 @@ function loadDataTable() {
             method: "GET"
         },
         "columns": [
-            { data: 'id'},
-            { data: 'name'},
-            { data: 'description'},
-            { data: 'openTime'},
-            { data: 'closeTime'},
-            { data: 'latitude'},
-            { data: 'longitude'},
-            { data: 'egyptianTicketPrice'},
-            { data: 'egyptianStudentTicketPrice'},
-            { data: 'foreignTicketPrice'},
-            { data: 'foreignStudentTicketPrice'},
-            { data: 'images'},
+            { data: 'id' },
+            { data: 'name' },
+            { data: 'description' },
+            { data: 'openTime' },
+            { data: 'closeTime' },
+            { data: 'latitude' },
+            { data: 'longitude' },
+            { data: 'egyptianTicketPrice' },
+            { data: 'egyptianStudentTicketPrice' },
+            { data: 'foreignTicketPrice' },
+            { data: 'foreignStudentTicketPrice' },
+            {
+                data: 'images',
+                "render": function (data) {
+                    return `<div class="w-75 btn-group" role="group">
+                      <img src="${data[0].url}" alt="Image" style="width: 200px; height: 150px;">
+                    </div>`
+                }
+            },
             {
                 data: 'id',
                 "render": function (data) {
