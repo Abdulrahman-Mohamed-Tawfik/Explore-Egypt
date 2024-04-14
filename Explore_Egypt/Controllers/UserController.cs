@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Explore_Egypt.Controllers
 {
-	//[Authorize(Roles = Constants.Admin)]
+	[Authorize(Roles = Constants.Admin)]
 	public class UserController : Controller
 	{
 		private readonly UserManager<ApplicationUser> _userManager;
