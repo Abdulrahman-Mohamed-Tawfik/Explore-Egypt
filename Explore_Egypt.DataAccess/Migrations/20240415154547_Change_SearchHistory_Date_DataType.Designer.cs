@@ -4,6 +4,7 @@ using Explore_Egypt.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Explore_Egypt.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240415154547_Change_SearchHistory_Date_DataType")]
+    partial class Change_SearchHistory_Date_DataType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -440,26 +443,18 @@ namespace Explore_Egypt.DataAccess.Migrations
 
             modelBuilder.Entity("Explore_Egypt.Models.SearchHistory", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime?>("Date")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int?>("LandmarkID")
                         .HasColumnType("int");
 
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<DateTime?>("Date")
+                        .HasColumnType("datetime2");
 
-                    b.HasKey("Id");
+                    b.HasKey("UserId", "LandmarkID");
 
                     b.HasIndex("LandmarkID");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("SearchHistory");
                 });
@@ -631,11 +626,15 @@ namespace Explore_Egypt.DataAccess.Migrations
                 {
                     b.HasOne("Explore_Egypt.Models.Landmark", "Landmark")
                         .WithMany("SearchHistories")
-                        .HasForeignKey("LandmarkID");
+                        .HasForeignKey("LandmarkID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Explore_Egypt.Models.ApplicationUser", "User")
                         .WithMany("SearchHistories")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Landmark");
 
