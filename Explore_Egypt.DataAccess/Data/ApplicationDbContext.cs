@@ -45,7 +45,7 @@ namespace Explore_Egypt.DataAccess.Data
                 .HasForeignKey(ab => ab.LandmarkID);
 
 			//Search History Table
-			modelBuilder.Entity<SearchHistory>().HasKey(ab => new { ab.UserId, ab.LandmarkID }); //make composite key
+			//modelBuilder.Entity<SearchHistory>().HasKey(ab => new { ab.UserId, ab.LandmarkID }); //make composite key
 
 			modelBuilder.Entity<SearchHistory>()
 				.HasOne(a => a.User)
