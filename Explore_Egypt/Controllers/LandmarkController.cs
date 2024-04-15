@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Explore_Egypt.Controllers
 {
-    //[Authorize(Roles = Constants.Admin)]
+    [Authorize(Roles = Constants.Admin)]
     public class LandmarkController : Controller
     {
         private readonly ApplicationDbContext _db;

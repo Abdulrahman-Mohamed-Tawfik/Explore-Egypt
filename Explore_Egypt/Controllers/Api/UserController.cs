@@ -117,7 +117,7 @@ namespace Explore_Egypt.Controllers.Api
 		}
 
 		//https://localhost:44316/api/user/login
-		[HttpGet("login", Name = "LoginWithEmailAndPassword")]
+		[HttpPost("login", Name = "LoginWithEmailAndPassword")]
 		[ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UserDto))]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
 		[ProducesResponseType(StatusCodes.Status400BadRequest)]
