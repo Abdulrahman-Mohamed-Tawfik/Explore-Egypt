@@ -4,6 +4,7 @@ using Explore_Egypt.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Explore_Egypt.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240415181038_Added20Landmarks")]
+    partial class Added20Landmarks
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -575,66 +578,6 @@ namespace Explore_Egypt.DataAccess.Migrations
                             Id = 19,
                             LandmarkId = 10,
                             Url = "\\landmarkImages\\Cairo_Tower\\2.jpg"
-                        },
-                        new
-                        {
-                            Id = 20,
-                            LandmarkId = 11,
-                            Url = "\\landmarkImages\\National_Museum_of Egyptian_Civilization\\1.jpg"
-                        },
-                        new
-                        {
-                            Id = 21,
-                            LandmarkId = 12,
-                            Url = "\\landmarkImages\\Colossi_of_Memnon\\1.jpg"
-                        },
-                        new
-                        {
-                            Id = 22,
-                            LandmarkId = 13,
-                            Url = "\\landmarkImages\\Coptic_Museum\\1.jpg"
-                        },
-                        new
-                        {
-                            Id = 23,
-                            LandmarkId = 14,
-                            Url = "\\landmarkImages\\Deir_el-Medina\\1.jpeg"
-                        },
-                        new
-                        {
-                            Id = 24,
-                            LandmarkId = 15,
-                            Url = "\\landmarkImages\\Denderah\\1.jpg"
-                        },
-                        new
-                        {
-                            Id = 25,
-                            LandmarkId = 16,
-                            Url = "\\landmarkImages\\Edfu_Temple\\1.jpg"
-                        },
-                        new
-                        {
-                            Id = 26,
-                            LandmarkId = 17,
-                            Url = "\\landmarkImages\\Egyptian_Museum\\1.jpg"
-                        },
-                        new
-                        {
-                            Id = 28,
-                            LandmarkId = 18,
-                            Url = "\\landmarkImages\\Al-Azhar_Mosque\\1.jpg"
-                        },
-                        new
-                        {
-                            Id = 29,
-                            LandmarkId = 19,
-                            Url = "\\landmarkImages\\Temple_of_Gerf_Hussein\\1.jpg"
-                        },
-                        new
-                        {
-                            Id = 30,
-                            LandmarkId = 20,
-                            Url = "\\landmarkImages\\Al-Hussein_Mosque\\2.jpg"
                         });
                 });
 
