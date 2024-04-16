@@ -297,6 +297,524 @@ namespace Explore_Egypt.DataAccess.Migrations
                             Longitude = 31.224288606195099,
                             Name = "Cairo Tower",
                             OpenTime = new TimeOnly(9, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CloseTime = new TimeOnly(17, 0, 0),
+                            Description = "Egypt is home to several significant museums showcasing its civilization. The Egyptian Museum in Cairo displays a vast collection of ancient artifacts, including Tutankhamun's treasures. The Luxor Museum highlights artifacts from the ancient city of Thebes. The Nubian Museum in Aswan focuses on Nubian culture and history. The Alexandria National Museum exhibits diverse artifacts from different historical periods. These museums offer invaluable insights into Egypt's rich civilization and heritage.",
+                            EgyptianStudentTicketPrice = 40.0m,
+                            EgyptianTicketPrice = 80.0m,
+                            ForeignStudentTicketPrice = 250.0m,
+                            ForeignTicketPrice = 500.0m,
+                            Latitude = 30.008417609418,
+                            Longitude = 31.248249387380302,
+                            Name = "National Museum of Egyptian Civilization",
+                            OpenTime = new TimeOnly(9, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CloseTime = new TimeOnly(17, 0, 0),
+                            Description = "The Colossi of Memnon are two massive stone statues located on the west bank of the Nile River in Luxor, Egypt. Dating back to the 14th century BCE, they depict Pharaoh Amenhotep III seated on his throne. Standing at around 18 meters (60 feet) tall, they are impressive examples of ancient Egyptian art and craftsmanship. The statues are known for producing a musical sound at sunrise due to natural phenomena, which was believed to be the voice of the mythical Memnon. Today, the Colossi of Memnon attract visitors as iconic remnants of ancient Egypt's grandeur.",
+                            EgyptianStudentTicketPrice = 0.0m,
+                            EgyptianTicketPrice = 0.0m,
+                            ForeignStudentTicketPrice = 0.0m,
+                            ForeignTicketPrice = 0.0m,
+                            Latitude = 25.720594393258999,
+                            Longitude = 32.610531971223701,
+                            Name = "Colossi of Memnon",
+                            OpenTime = new TimeOnly(6, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CloseTime = new TimeOnly(17, 0, 0),
+                            Description = "The Coptic Museum is a renowned museum located in Cairo, Egypt. It is dedicated to preserving and showcasing the rich heritage of Egypt's Coptic Christian community. The museum houses a vast collection of artifacts, including religious manuscripts, icons, textiles, and ancient Coptic artwork. Visitors can explore the museum's exhibits, which provide insights into Coptic history, culture, and art. The museum is an important cultural and historical destination, offering a unique perspective on Egypt's diverse religious and artistic traditions.",
+                            EgyptianStudentTicketPrice = 10.0m,
+                            EgyptianTicketPrice = 20.0m,
+                            ForeignStudentTicketPrice = 120.0m,
+                            ForeignTicketPrice = 230.0m,
+                            Latitude = 30.005778097385001,
+                            Longitude = 31.230398849392401,
+                            Name = "Coptic Museum",
+                            OpenTime = new TimeOnly(9, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CloseTime = new TimeOnly(17, 0, 0),
+                            Description = "Deir el-Medina is an ancient Egyptian village located on the west bank of the Nile near Luxor. It was inhabited by the skilled artisans and workers who constructed royal tombs in the nearby Valley of the Kings. The village is known for its well-preserved structures, including houses, workshops, and a temple dedicated to the goddess Hathor. It offers valuable insights into the daily life, religious practices, and artistic skills of the ancient Egyptians. Deir el-Medina is a significant archaeological site that sheds light on the intricacies of ancient Egyptian society.",
+                            EgyptianStudentTicketPrice = 0.0m,
+                            EgyptianTicketPrice = 0.0m,
+                            ForeignStudentTicketPrice = 0.0m,
+                            ForeignTicketPrice = 0.0m,
+                            Latitude = 25.7289015527221,
+                            Longitude = 32.602222602306902,
+                            Name = "Deir el-Medina",
+                            OpenTime = new TimeOnly(6, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CloseTime = new TimeOnly(17, 0, 0),
+                            Description = "Denderah, located in Upper Egypt, is an ancient Egyptian temple complex dedicated to the goddess Hathor. The centerpiece is the Temple of Hathor, known for its well-preserved and elaborate reliefs and carvings. The temple features a striking hypostyle hall, a sacred lake, and a birthing house. Denderah is renowned for its astronomical ceiling depicting the zodiac signs. It is a significant archaeological site and a testament to the architectural and artistic achievements of ancient Egypt.",
+                            EgyptianStudentTicketPrice = 10.0m,
+                            EgyptianTicketPrice = 20.0m,
+                            ForeignStudentTicketPrice = 120.0m,
+                            ForeignTicketPrice = 240.0m,
+                            Latitude = 26.1676120463747,
+                            Longitude = 32.656609106246201,
+                            Name = "Denderah",
+                            OpenTime = new TimeOnly(7, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 16,
+                            CloseTime = new TimeOnly(18, 0, 0),
+                            Description = "Edfu Temple is an ancient Egyptian temple located on the west bank of the Nile in Edfu, Egypt. It is dedicated to the falcon-headed god Horus and is one of the best-preserved temples in Egypt. The temple was built during the Ptolemaic period and showcases remarkable architecture, including a towering entrance pylon and a well-preserved hypostyle hall. Its walls are adorned with intricate reliefs depicting mythological scenes and rituals. Edfu Temple is a significant religious site and a testament to the grandeur of ancient Egyptian temple construction.",
+                            EgyptianStudentTicketPrice = 20.0m,
+                            EgyptianTicketPrice = 40.0m,
+                            ForeignStudentTicketPrice = 230.0m,
+                            ForeignTicketPrice = 450.0m,
+                            Latitude = 24.977948234046298,
+                            Longitude = 32.873369294153498,
+                            Name = "Edfu Temple",
+                            OpenTime = new TimeOnly(6, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 17,
+                            CloseTime = new TimeOnly(17, 0, 0),
+                            Description = "The Egyptian Museum, located in Cairo, Egypt, is one of the world's most significant museums dedicated to ancient Egyptian artifacts. It houses an extensive collection of over 120,000 artifacts, including the treasures of Tutankhamun. The museum showcases statues, mummies, jewelry, and other artifacts spanning several dynasties. Visitors can explore the museum's exhibits, which provide insights into ancient Egyptian history, culture, and art. The Egyptian Museum is a must-visit destination for anyone interested in experiencing the magnificence of Egypt's ancient civilization.",
+                            EgyptianStudentTicketPrice = 10.0m,
+                            EgyptianTicketPrice = 30.0m,
+                            ForeignStudentTicketPrice = 230.0m,
+                            ForeignTicketPrice = 450.0m,
+                            Latitude = 30.048323478375501,
+                            Longitude = 31.233662840341701,
+                            Name = "Egyptian Museum",
+                            OpenTime = new TimeOnly(9, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 18,
+                            CloseTime = new TimeOnly(9, 0, 0),
+                            Description = "Al-Azhar Mosque is a historic mosque located in Cairo, Egypt, and is one of the oldest Islamic universities in the world. It was founded in the 10th century and is renowned for its religious and educational significance. The mosque showcases exquisite Islamic architecture, including a beautiful courtyard and minarets. It serves as a center for Islamic learning and hosts religious lectures and conferences. Al-Azhar Mosque is a significant religious and cultural landmark, attracting visitors from around the world.\r\n\r\n\r\n\r\n\r\n",
+                            EgyptianStudentTicketPrice = 0.0m,
+                            EgyptianTicketPrice = 0.0m,
+                            ForeignStudentTicketPrice = 0.0m,
+                            ForeignTicketPrice = 0.0m,
+                            Latitude = 30.045704450605999,
+                            Longitude = 31.2626775702408,
+                            Name = "Al-Azhar Mosque",
+                            OpenTime = new TimeOnly(9, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 19,
+                            CloseTime = new TimeOnly(18, 0, 0),
+                            Description = "The Temple of Gerf Hussein is an ancient Egyptian temple located in Upper Nubia, near the Sudanese border. It was relocated during the construction of the Aswan High Dam. The temple was dedicated to the Nubian deity Dedun and was built during the reign of Ramses II. It features well-preserved reliefs depicting Ramses II and various religious scenes. The Temple of Gerf Hussein offers a glimpse into the ancient Egyptian presence in Nubia and the cultural exchange between the two regions.\r\n\r\n\r\n\r\n\r\n",
+                            EgyptianStudentTicketPrice = 0.0m,
+                            EgyptianTicketPrice = 0.0m,
+                            ForeignStudentTicketPrice = 0.0m,
+                            ForeignTicketPrice = 0.0m,
+                            Latitude = 23.960170000000002,
+                            Longitude = 32.867649999999998,
+                            Name = "Temple of Gerf Hussein",
+                            OpenTime = new TimeOnly(6, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 20,
+                            CloseTime = new TimeOnly(9, 0, 0),
+                            Description = "The El-Hussein Mosque is a historic mosque located in Cairo, Egypt. It is named after Hussein ibn Ali, the grandson of Prophet Muhammad. The mosque is considered a sacred site and holds religious significance for the Shia Muslim community. It features a beautiful courtyard, minarets, and a dome. The mosque is known for its intricate architectural details and is a popular destination for worshippers and visitors seeking spiritual solace. The El-Hussein Mosque stands as a symbol of religious devotion and cultural heritage in Cairo.\r\n\r\n\r\n\r\n\r\n",
+                            EgyptianStudentTicketPrice = 0.0m,
+                            EgyptianTicketPrice = 0.0m,
+                            ForeignStudentTicketPrice = 0.0m,
+                            ForeignTicketPrice = 0.0m,
+                            Latitude = 30.144705031156899,
+                            Longitude = 31.3403268229041,
+                            Name = "Al-Hussein Mosque",
+                            OpenTime = new TimeOnly(9, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 21,
+                            CloseTime = new TimeOnly(0, 0, 0),
+                            Description = "Montazah Palace is a grand palace located in Alexandria, Egypt. It was built in the early 20th century and served as a summer residence for Egypt's royal family. The palace features stunning gardens, beachfront views, and elegant architectural design. It is surrounded by lush greenery and overlooks the Mediterranean Sea. Today, Montazah Palace is open to the public and serves as a popular tourist destination, offering visitors a chance to explore its opulent interiors and enjoy the picturesque surroundings.\r\n\r\n\r\n\r\n\r\n",
+                            EgyptianStudentTicketPrice = 25.0m,
+                            EgyptianTicketPrice = 25.0m,
+                            ForeignStudentTicketPrice = 25.0m,
+                            ForeignTicketPrice = 25.0m,
+                            Latitude = 31.288778399841402,
+                            Longitude = 30.015824382393902,
+                            Name = "Montaza Palace",
+                            OpenTime = new TimeOnly(8, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 22,
+                            CloseTime = new TimeOnly(16, 0, 0),
+                            Description = "Philae Temple is an ancient Egyptian temple complex located on an island in the Nile River, near Aswan, Egypt. It is dedicated to the goddess Isis and was originally located on Philae Island before being relocated to Agilkia Island due to the construction of the Aswan High Dam. The temple features stunning architectural elements, such as pylons, colonnades, and beautifully carved reliefs. It is renowned for its association with the cult of Isis and was an important pilgrimage site in ancient times. Philae Temple is a UNESCO World Heritage Site and a popular tourist attraction, offering visitors a glimpse into the religious practices and artistic achievements of ancient Egypt.\r\n\r\n\r\n\r\n\r\n",
+                            EgyptianStudentTicketPrice = 20.0m,
+                            EgyptianTicketPrice = 40.0m,
+                            ForeignStudentTicketPrice = 230.0m,
+                            ForeignTicketPrice = 450.0m,
+                            Latitude = 24.012668110522998,
+                            Longitude = 32.877539756904802,
+                            Name = "Philae Temple",
+                            OpenTime = new TimeOnly(7, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 23,
+                            CloseTime = new TimeOnly(16, 0, 0),
+                            Description = "The Hanging Church, also known as the Saint Virgin Mary's Coptic Orthodox Church, is a historic church located in Cairo, Egypt. It dates back to the 4th century and is one of the oldest churches in Egypt. The church is known for its unique architectural design and is built on top of the southern gatehouse of the Roman Babylon Fortress. It features beautiful artwork, intricate woodwork, and a suspended appearance. The Hanging Church is a significant religious and cultural landmark, attracting both locals and tourists interested in exploring Egypt's Coptic Christian heritage.\r\n\r\n\r\n\r\n\r\n",
+                            EgyptianStudentTicketPrice = 0.0m,
+                            EgyptianTicketPrice = 0.0m,
+                            ForeignStudentTicketPrice = 0.0m,
+                            ForeignTicketPrice = 0.0m,
+                            Latitude = 30.005275993870399,
+                            Longitude = 31.230183117340601,
+                            Name = "Hanging Church",
+                            OpenTime = new TimeOnly(9, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 24,
+                            CloseTime = new TimeOnly(17, 0, 0),
+                            Description = "The Ibn Tulun Mosque is a historic mosque located in Cairo, Egypt. It was built in the 9th century by the Abbasid governor Ahmed Ibn Tulun and is one of the oldest mosques in the city. The mosque showcases remarkable Islamic architecture, including a vast courtyard, a central sanctuary, and a tall minaret. It is known for its spiral staircase, which offers panoramic views of the surrounding area. The Ibn Tulun Mosque is a significant cultural and religious site, attracting visitors with its architectural beauty and historical importance.\r\n\r\n\r\n\r\n\r\n",
+                            EgyptianStudentTicketPrice = 0.0m,
+                            EgyptianTicketPrice = 0.0m,
+                            ForeignStudentTicketPrice = 0.0m,
+                            ForeignTicketPrice = 0.0m,
+                            Latitude = 30.028721043927799,
+                            Longitude = 31.249401444764501,
+                            Name = "Ibn Tulun Mosque",
+                            OpenTime = new TimeOnly(9, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 25,
+                            CloseTime = new TimeOnly(9, 0, 0),
+                            Description = "The Ibrahim Basha Statue is a prominent statue located in Egypt, specifically in the city of Cairo. The statue commemorates Ibrahim Pasha, an Ottoman governor who played a significant role in the modernization and development of Egypt during the 19th century. The statue depicts Ibrahim Pasha on horseback, portraying his leadership and military prowess. It stands as a symbol of his contributions to Egypt's political and social transformation. The statue is situated in a prominent public space, serving as a reminder of Ibrahim Pasha's legacy and the historical ties between Egypt and the Ottoman Empire. It attracts visitors who come to admire its artistic representation and learn about the historical figure it represents. The Ibrahim Basha Statue serves as a testament to the complex history and cultural heritage of Egypt.",
+                            EgyptianStudentTicketPrice = 0.0m,
+                            EgyptianTicketPrice = 0.0m,
+                            ForeignStudentTicketPrice = 0.0m,
+                            ForeignTicketPrice = 0.0m,
+                            Latitude = 30.050775543229701,
+                            Longitude = 31.247151015140499,
+                            Name = "Statue of Ibrahim Pasha",
+                            OpenTime = new TimeOnly(9, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 26,
+                            CloseTime = new TimeOnly(17, 0, 0),
+                            Description = "Karnak Temple is an expansive ancient Egyptian temple complex located in Luxor, Egypt. It is one of the largest religious sites in the world. The temple dates back to the Middle Kingdom and was continuously expanded by various pharaohs over the centuries. It features impressive structures, such as the Great Hypostyle Hall and the Avenue of Sphinxes. Karnak Temple is dedicated to the Theban triad of Amun, Mut, and Khonsu, and it offers visitors a remarkable glimpse into the grandeur and religious significance of ancient Egypt.",
+                            EgyptianStudentTicketPrice = 20.0m,
+                            EgyptianTicketPrice = 40.0m,
+                            ForeignStudentTicketPrice = 230.0m,
+                            ForeignTicketPrice = 450.0m,
+                            Latitude = 25.718899913934699,
+                            Longitude = 32.6572905586685,
+                            Name = "Karnak",
+                            OpenTime = new TimeOnly(6, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 27,
+                            CloseTime = new TimeOnly(17, 0, 0),
+                            Description = "Khnum Temple, located in Esna, Egypt, is an ancient Egyptian temple dedicated to the god Khnum. It was constructed during the Ptolemaic and Roman periods. The temple features well-preserved reliefs and carvings depicting scenes from ancient Egyptian mythology and religious rituals. Its hypostyle hall is notable for its intricately decorated columns. Khnum Temple is a significant archaeological site that offers insight into the religious practices and beliefs of ancient Egypt.",
+                            EgyptianStudentTicketPrice = 10.0m,
+                            EgyptianTicketPrice = 20.0m,
+                            ForeignStudentTicketPrice = 40.0m,
+                            ForeignTicketPrice = 80.0m,
+                            Latitude = 25.293655331805802,
+                            Longitude = 32.556101992752097,
+                            Name = "Temple of Khnum",
+                            OpenTime = new TimeOnly(8, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 28,
+                            CloseTime = new TimeOnly(21, 0, 0),
+                            Description = "Kom Ombo Temple is an ancient Egyptian temple situated in Kom Ombo, Egypt. It is a unique double temple dedicated to two gods: Sobek, the crocodile god, and Horus, the falcon-headed god. The temple showcases exquisite reliefs and carvings depicting mythological scenes and medical instruments. It has twin sanctuaries and a fascinating Nilometer used to measure the river's water level. Kom Ombo Temple offers visitors a captivating experience with its dual dedication and rich historical significance.",
+                            EgyptianStudentTicketPrice = 20.0m,
+                            EgyptianTicketPrice = 40.0m,
+                            ForeignStudentTicketPrice = 180.0m,
+                            ForeignTicketPrice = 360.0m,
+                            Latitude = 24.452140085464201,
+                            Longitude = 32.928431386456701,
+                            Name = "Kom Ombo Temple",
+                            OpenTime = new TimeOnly(7, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 29,
+                            CloseTime = new TimeOnly(20, 0, 0),
+                            Description = "Luxor Temple is an ancient Egyptian temple located in the city of Luxor, Egypt. It was built during the New Kingdom period and is dedicated to the god Amun. The temple features grand colonnades, impressive statues, and intricate reliefs depicting pharaohs and deities. It is renowned for its Avenue of Sphinxes, connecting it to the Karnak Temple. Luxor Temple is a significant archaeological site and a symbol of ancient Egyptian civilization, attracting visitors from around the world.",
+                            EgyptianStudentTicketPrice = 20.0m,
+                            EgyptianTicketPrice = 40.0m,
+                            ForeignStudentTicketPrice = 200.0m,
+                            ForeignTicketPrice = 400.0m,
+                            Latitude = 25.699508013656299,
+                            Longitude = 32.639052377855499,
+                            Name = "Luxor Temple",
+                            OpenTime = new TimeOnly(6, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 30,
+                            CloseTime = new TimeOnly(17, 0, 0),
+                            Description = "The Mohamed Ali Mosque, also known as the Alabaster Mosque, is a stunning mosque located in the Citadel of Cairo, Egypt. It was built in the 19th century by Muhammad Ali Pasha, the ruler of Egypt. The mosque showcases a striking Ottoman architectural style, with its prominent domes and minarets. Its interior features intricate decorations and beautiful stained glass windows. The Mohamed Ali Mosque offers panoramic views of Cairo and stands as a prominent landmark and religious site in the city.",
+                            EgyptianStudentTicketPrice = 30.0m,
+                            EgyptianTicketPrice = 60.0m,
+                            ForeignStudentTicketPrice = 230.0m,
+                            ForeignTicketPrice = 450.0m,
+                            Latitude = 30.0287160707969,
+                            Longitude = 31.259910248070401,
+                            Name = "Mosque of Muhammad Ali",
+                            OpenTime = new TimeOnly(8, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 31,
+                            CloseTime = new TimeOnly(17, 0, 0),
+                            Description = "The Mostafa Kamel Museum is a museum in Cairo.It was officially opened in April 1956. Before that, it was a mausoleum containing the remains of the two leaders, Mustafa Kamel and Muhammad Farid. It also houses the remains of the intellectuals and activists, Abd al-Rahman al-Rafei and Fathi Radwan. The museum is built in the style of the Islamic mausoleum dome and includes two halls containing some of the belongings of the leader Mustafa Kamel represented in his books and letters in his handwriting, and some pictures of his friends and relatives, as well as some of his personal belongings of clothes, dining utensils, and his office room. The museum also includes oil paintings depicting the Denshway incident. On February 8, 2001, the museum reopened after being restored.",
+                            EgyptianStudentTicketPrice = 5.0m,
+                            EgyptianTicketPrice = 10.0m,
+                            ForeignStudentTicketPrice = 50.0m,
+                            ForeignTicketPrice = 100.0m,
+                            Latitude = 30.029560986308599,
+                            Longitude = 31.257227436188,
+                            Name = "Mostafa Kamel Museum",
+                            OpenTime = new TimeOnly(9, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 32,
+                            CloseTime = new TimeOnly(17, 0, 0),
+                            Description = "The Islamic Arts Museum in Egypt, located in Cairo, is a prominent museum dedicated to showcasing Islamic art and artifacts. It houses a vast collection of Islamic art pieces spanning various periods and regions. The museum exhibits intricate calligraphy, ceramics, textiles, metalwork, and more. Visitors can explore the museum's galleries, which provide a comprehensive view of the rich artistic heritage of the Islamic world. The Islamic Arts Museum in Egypt is a valuable cultural institution, preserving and promoting Islamic art and its significance.",
+                            EgyptianStudentTicketPrice = 10.0m,
+                            EgyptianTicketPrice = 20.0m,
+                            ForeignStudentTicketPrice = 140.0m,
+                            ForeignTicketPrice = 270.0m,
+                            Latitude = 30.0447369750107,
+                            Longitude = 31.252718977406701,
+                            Name = "Museum of Islamic Arts",
+                            OpenTime = new TimeOnly(9, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 33,
+                            CloseTime = new TimeOnly(9, 0, 0),
+                            Description = "Egypt's Renaissance Statue, also known as Nahdet Masr or The Awakening of Egypt, is a monumental sculpture located in Cairo, Egypt. It was unveiled in 2019 and stands at a height of 20 meters (66 feet). The statue symbolizes the modern renaissance and progress of Egypt. It depicts a man and a woman holding the Egyptian flag, representing unity and national pride. The statue has become an iconic symbol of Egypt's aspirations for development and advancement.",
+                            EgyptianStudentTicketPrice = 0.0m,
+                            EgyptianTicketPrice = 0.0m,
+                            ForeignStudentTicketPrice = 0.0m,
+                            ForeignTicketPrice = 0.0m,
+                            Latitude = 30.0283395211917,
+                            Longitude = 31.215928801836299,
+                            Name = "Egypt's Renaissance Statue",
+                            OpenTime = new TimeOnly(9, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 34,
+                            CloseTime = new TimeOnly(21, 0, 0),
+                            Description = "The October War Panorama is a historical exhibit located in Cairo, Egypt. It commemorates the events of the October War of 1973, also known as the Yom Kippur War. The panorama offers a panoramic view of the battlefield, featuring life-sized models, sound effects, and multimedia presentations. It provides visitors with an immersive experience, allowing them to relive the key moments and understand the significance of the war. The October War Panorama serves as a tribute to the valor and sacrifice of the Egyptian armed forces during the conflict.",
+                            EgyptianStudentTicketPrice = 30.0m,
+                            EgyptianTicketPrice = 30.0m,
+                            ForeignStudentTicketPrice = 120.0m,
+                            ForeignTicketPrice = 120.0m,
+                            Latitude = 30.074287213695399,
+                            Longitude = 31.3068091801549,
+                            Name = "October War Panorama",
+                            OpenTime = new TimeOnly(9, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 35,
+                            CloseTime = new TimeOnly(17, 0, 0),
+                            Description = "The Pyramids of Egypt are iconic ancient structures located on the outskirts of Cairo. They include the famous pyramids of Giza, such as the Great Pyramid of Khufu, Khafre Pyramid, and Menkaure Pyramid. Built as tombs for the pharaohs during the Old Kingdom period, they stand as a testament to the engineering and architectural prowess of ancient Egypt. The pyramids are surrounded by a vast necropolis and are accompanied by the Sphinx, a mythical creature with the head of a human and the body of a lion. The pyramids continue to captivate visitors from around the world, representing the enduring legacy of ancient Egyptian civilization.",
+                            EgyptianStudentTicketPrice = 30.0m,
+                            EgyptianTicketPrice = 60.0m,
+                            ForeignStudentTicketPrice = 270.0m,
+                            ForeignTicketPrice = 540.0m,
+                            Latitude = 29.977352601113601,
+                            Longitude = 31.1324969342758,
+                            Name = "Egyptian Pyramids",
+                            OpenTime = new TimeOnly(7, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 36,
+                            CloseTime = new TimeOnly(20, 0, 0),
+                            Description = "Qaitbay Castle, located in Alexandria, Egypt, is a historic fortress situated on the Mediterranean coastline. Built in the 15th century, it was commissioned by Sultan Al-Ashraf Qaitbay as a defensive stronghold against potential invaders. The castle boasts impressive architectural features, including sturdy walls, towers, and a central courtyard. It offers panoramic views of the sea and the city of Alexandria. Qaitbay Castle stands as a testament to Egypt's maritime history and is a popular tourist attraction, providing visitors with a glimpse into the region's rich architectural and military heritage.",
+                            EgyptianStudentTicketPrice = 30.0m,
+                            EgyptianTicketPrice = 60.0m,
+                            ForeignStudentTicketPrice = 75.0m,
+                            ForeignTicketPrice = 150.0m,
+                            Latitude = 31.214023180978199,
+                            Longitude = 29.885633678807501,
+                            Name = "Citadel of Qaitbay",
+                            OpenTime = new TimeOnly(9, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 37,
+                            CloseTime = new TimeOnly(9, 0, 0),
+                            Description = "Qasr El-Nil is a historic district located in Cairo, Egypt, along the banks of the Nile River. It is known for its significant role in Egyptian history and as a hub for cultural and political activities. The district is home to notable landmarks such as Tahrir Square and the Egyptian Museum. Qasr El-Nil is a vibrant area with bustling streets, shops, cafes, and restaurants. It serves as a gathering place for locals and visitors alike, offering a lively atmosphere and glimpses into the city's past and present.",
+                            EgyptianStudentTicketPrice = 0.0m,
+                            EgyptianTicketPrice = 0.0m,
+                            ForeignStudentTicketPrice = 0.0m,
+                            ForeignTicketPrice = 0.0m,
+                            Latitude = 30.044057021392899,
+                            Longitude = 31.231628662302601,
+                            Name = "Qasr El Nile",
+                            OpenTime = new TimeOnly(9, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 38,
+                            CloseTime = new TimeOnly(17, 0, 0),
+                            Description = "The Royal Jewelry Museum is a captivating museum located in Alexandria, Egypt. It showcases a stunning collection of exquisite jewelry and precious artifacts once owned by the royal family of Egypt. The museum is housed in a beautiful palace that was built in the early 20th century. Visitors can explore the opulent rooms filled with jewelry, crowns, tiaras, and other dazzling pieces. The museum offers a glimpse into the grandeur and luxury of Egypt's royal heritage, making it a must-visit destination for jewelry enthusiasts and history lovers.",
+                            EgyptianStudentTicketPrice = 5.0m,
+                            EgyptianTicketPrice = 20.0m,
+                            ForeignStudentTicketPrice = 90.0m,
+                            ForeignTicketPrice = 180.0m,
+                            Latitude = 31.2406196888804,
+                            Longitude = 29.9632878058699,
+                            Name = "Royal Jewelry Museum",
+                            OpenTime = new TimeOnly(9, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 39,
+                            CloseTime = new TimeOnly(23, 30, 0),
+                            Description = "St. Catherine's Monastery is a historic Christian monastery located at the foot of Mount Sinai in the Sinai Peninsula, Egypt. It is one of the oldest working monasteries in the world, dating back to the 6th century. The monastery is known for housing the Burning Bush, a significant biblical site. It features ancient religious manuscripts, icons, and a library with a vast collection of rare books. St. Catherine's Monastery attracts pilgrims and tourists, offering a glimpse into the rich religious and cultural heritage of the region.",
+                            EgyptianStudentTicketPrice = 0.0m,
+                            EgyptianTicketPrice = 0.0m,
+                            ForeignStudentTicketPrice = 0.0m,
+                            ForeignTicketPrice = 0.0m,
+                            Latitude = 28.555995513522699,
+                            Longitude = 33.976053366266299,
+                            Name = "Saint Catherine",
+                            OpenTime = new TimeOnly(8, 45, 0)
+                        },
+                        new
+                        {
+                            Id = 40,
+                            CloseTime = new TimeOnly(17, 0, 0),
+                            Description = "The Saqqara Pyramid, also known as the Step Pyramid of Djoser, is an ancient Egyptian pyramid located in Saqqara, near Cairo, Egypt. It was built during the 27th century BCE and is considered one of the earliest colossal stone structures in Egypt. Designed by the architect Imhotep, the pyramid consists of six layers or steps, giving it a unique appearance. Saqqara Pyramid marks a significant transition in pyramid construction from simple mastabas to grand pyramids. It stands as a remarkable testament to the architectural achievements of ancient Egypt and attracts visitors interested in exploring its historical and archaeological significance.",
+                            EgyptianStudentTicketPrice = 10.0m,
+                            EgyptianTicketPrice = 30.0m,
+                            ForeignStudentTicketPrice = 230.0m,
+                            ForeignTicketPrice = 450.0m,
+                            Latitude = 29.868495221505199,
+                            Longitude = 31.216827353215301,
+                            Name = "Saqqara",
+                            OpenTime = new TimeOnly(8, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 41,
+                            CloseTime = new TimeOnly(17, 0, 0),
+                            Description = "The Great Sphinx is an iconic statue located in Giza, Egypt, near the pyramids. It is a colossal sculpture with the body of a lion and the head of a human, believed to represent the pharaoh Khafre. The Sphinx stands at approximately 73 meters long and 20 meters tall. It is shrouded in mystery and has captivated people for centuries with its enigmatic expression and symbolism. The Great Sphinx is a UNESCO World Heritage Site and remains a symbol of ancient Egypt's grandeur and architectural achievements.",
+                            EgyptianStudentTicketPrice = 40.0m,
+                            EgyptianTicketPrice = 80.0m,
+                            ForeignStudentTicketPrice = 200.0m,
+                            ForeignTicketPrice = 400.0m,
+                            Latitude = 29.9752739473739,
+                            Longitude = 31.137567265589599,
+                            Name = "Sphinx",
+                            OpenTime = new TimeOnly(8, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 42,
+                            CloseTime = new TimeOnly(17, 0, 0),
+                            Description = "The Sultan Hassan Mosque is a historic mosque located in Cairo, Egypt. It was built in the 14th century during the Mamluk period by Sultan Hassan. The mosque showcases impressive Mamluk architecture, featuring soaring minarets, grand domes, and intricate stone carvings. It includes a large prayer hall, a courtyard, and a mausoleum. The Sultan Hassan Mosque is known for its monumental size and elegant design, making it one of the most prominent mosques in Cairo. It stands as a testament to the rich architectural heritage of Islamic Egypt and is a significant cultural and religious site.",
+                            EgyptianStudentTicketPrice = 0.0m,
+                            EgyptianTicketPrice = 0.0m,
+                            ForeignStudentTicketPrice = 90.0m,
+                            ForeignTicketPrice = 180.0m,
+                            Latitude = 30.032282865259202,
+                            Longitude = 31.256173392802701,
+                            Name = "Mosque-Madrasa of Sultan Hassan",
+                            OpenTime = new TimeOnly(9, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 43,
+                            CloseTime = new TimeOnly(17, 0, 0),
+                            Description = "The Roman amphitheatre of Alexandria, also known as the Kom El Dikka amphitheatre, is an ancient Roman amphitheatre located in Alexandria, Egypt. It dates back to the 2nd century CE and was once part of a larger complex that included baths and a lecture hall. The amphitheatre could seat around 800 spectators and was used for various performances and events. Today, it stands as a remarkable archaeological site, with remnants of its seating, stage, and corridors still visible. The Roman amphitheatre of Alexandria offers a glimpse into the Roman influence on the city's history and cultural life.",
+                            EgyptianStudentTicketPrice = 10.0m,
+                            EgyptianTicketPrice = 20.0m,
+                            ForeignStudentTicketPrice = 75.0m,
+                            ForeignTicketPrice = 150.0m,
+                            Latitude = 31.194653175457201,
+                            Longitude = 29.904027937707699,
+                            Name = "Roman Amphitheatre in Alexandria",
+                            OpenTime = new TimeOnly(9, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 44,
+                            CloseTime = new TimeOnly(16, 0, 0),
+                            Description = "The Temple of Derr is an ancient Egyptian temple located in Lower Nubia, now submerged under Lake Nasser due to the construction of the Aswan High Dam. It was dedicated to the god Amun and was built during the reign of Ramses II. The temple featured stunning reliefs depicting Ramses II and scenes from his military campaigns. Prior to the dam's construction, the temple was dismantled and relocated to its current location on the island of New Kalabsha. The Temple of Derr represents the efforts to preserve and relocate ancient Egyptian monuments threatened by modern development.",
+                            EgyptianStudentTicketPrice = 0.0m,
+                            EgyptianTicketPrice = 0.0m,
+                            ForeignStudentTicketPrice = 0.0m,
+                            ForeignTicketPrice = 0.0m,
+                            Latitude = 22.732407869652,
+                            Longitude = 32.262263849806999,
+                            Name = "Temple of Derr",
+                            OpenTime = new TimeOnly(7, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 45,
+                            CloseTime = new TimeOnly(17, 0, 0),
+                            Description = "The Valley of the Kings is an archaeological site located near Luxor, Egypt. It served as the burial ground for pharaohs and powerful nobles during the New Kingdom period. The valley contains over 60 tombs, including the famous tomb of Tutankhamun. The tombs are adorned with intricate wall paintings and hieroglyphic inscriptions. The Valley of the Kings is a UNESCO World Heritage Site and offers visitors a unique opportunity to explore the royal tombs and gain insights into ancient Egyptian funerary practices and beliefs.",
+                            EgyptianStudentTicketPrice = 30.0m,
+                            EgyptianTicketPrice = 60.0m,
+                            ForeignStudentTicketPrice = 300.0m,
+                            ForeignTicketPrice = 600.0m,
+                            Latitude = 25.740175346768901,
+                            Longitude = 32.601410604736301,
+                            Name = "Valley of the Kings",
+                            OpenTime = new TimeOnly(6, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 46,
+                            CloseTime = new TimeOnly(9, 0, 0),
+                            Description = "The White Desert, also known as the Sahara el Beyda, is a mesmerizing natural wonder located in Egypt's Western Desert. It is characterized by surreal white rock formations shaped by erosion over millions of years. The landscape resembles a dream-like desert with unique formations resembling mushrooms, pillars, and other fascinating shapes. The White Desert is a popular destination for camping and stargazing, offering visitors a chance to witness the stark beauty of the desert under the moonlight. It is a remarkable testament to the incredible geological diversity found in Egypt's deserts.",
+                            EgyptianStudentTicketPrice = 0.0m,
+                            EgyptianTicketPrice = 0.0m,
+                            ForeignStudentTicketPrice = 0.0m,
+                            ForeignTicketPrice = 0.0m,
+                            Latitude = 27.364055954160701,
+                            Longitude = 28.1219488191139,
+                            Name = "White Desert",
+                            OpenTime = new TimeOnly(9, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 47,
+                            CloseTime = new TimeOnly(16, 0, 0),
+                            Description = "Kalabsha Temple, also known as the Temple of Mandulis, is an ancient Egyptian temple located near Aswan, Egypt. It was constructed during the Roman period and is dedicated to the Nubian sun god Mandulis. The temple features well-preserved reliefs and carvings depicting various deities and pharaohs. It showcases a traditional Egyptian architectural style with pylons, a hypostyle hall, and a sanctuary. Kalabsha Temple is a popular tourist attraction, offering visitors a chance to explore the history and religious practices of ancient Egypt in the southern region.",
+                            EgyptianStudentTicketPrice = 5.0m,
+                            EgyptianTicketPrice = 10.0m,
+                            ForeignStudentTicketPrice = 75.0m,
+                            ForeignTicketPrice = 150.0m,
+                            Latitude = 23.960940940920398,
+                            Longitude = 32.867408201691298,
+                            Name = "Kalabsha Temple",
+                            OpenTime = new TimeOnly(7, 0, 0)
                         });
                 });
 
@@ -435,6 +953,228 @@ namespace Explore_Egypt.DataAccess.Migrations
                             Id = 19,
                             LandmarkId = 10,
                             Url = "\\landmarkImages\\Cairo_Tower\\2.jpg"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            LandmarkId = 11,
+                            Url = "\\landmarkImages\\National_Museum_of Egyptian_Civilization\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 21,
+                            LandmarkId = 12,
+                            Url = "\\landmarkImages\\Colossi_of_Memnon\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 22,
+                            LandmarkId = 13,
+                            Url = "\\landmarkImages\\Coptic_Museum\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 23,
+                            LandmarkId = 14,
+                            Url = "\\landmarkImages\\Deir_el-Medina\\1.jpeg"
+                        },
+                        new
+                        {
+                            Id = 24,
+                            LandmarkId = 15,
+                            Url = "\\landmarkImages\\Denderah\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 25,
+                            LandmarkId = 16,
+                            Url = "\\landmarkImages\\Edfu_Temple\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 26,
+                            LandmarkId = 17,
+                            Url = "\\landmarkImages\\Egyptian_Museum\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 27,
+                            LandmarkId = 21,
+                            Url = "\\landmarkImages\\Montaza_Palace\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 28,
+                            LandmarkId = 18,
+                            Url = "\\landmarkImages\\Al-Azhar_Mosque\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 29,
+                            LandmarkId = 19,
+                            Url = "\\landmarkImages\\Temple_of_Gerf_Hussein\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 30,
+                            LandmarkId = 20,
+                            Url = "\\landmarkImages\\Al-Hussein_Mosque\\2.jpg"
+                        },
+                        new
+                        {
+                            Id = 31,
+                            LandmarkId = 22,
+                            Url = "\\landmarkImages\\Philae_Temple\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 32,
+                            LandmarkId = 23,
+                            Url = "\\landmarkImages\\Hanging_Church\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 33,
+                            LandmarkId = 24,
+                            Url = "\\landmarkImages\\Ibn_Tulun_Mosque\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 34,
+                            LandmarkId = 25,
+                            Url = "\\landmarkImages\\Statue_of_Ibrahim_Pasha\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 35,
+                            LandmarkId = 26,
+                            Url = "\\landmarkImages\\Karnak\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 36,
+                            LandmarkId = 27,
+                            Url = "\\landmarkImages\\Temple_of_Khnum\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 37,
+                            LandmarkId = 28,
+                            Url = "\\landmarkImages\\Kom_Ombo_Temple\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 38,
+                            LandmarkId = 29,
+                            Url = "\\landmarkImages\\Luxor_Temple\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 39,
+                            LandmarkId = 30,
+                            Url = "\\landmarkImages\\Mosque_of_Muhammad_Ali\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 40,
+                            LandmarkId = 31,
+                            Url = "\\landmarkImages\\Mostafa_Kamel_Museum\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 41,
+                            LandmarkId = 32,
+                            Url = "\\landmarkImages\\Museum_of_Islamic_Arts\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 42,
+                            LandmarkId = 33,
+                            Url = "\\landmarkImages\\Egypt_s_Renaissance_Statue\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 43,
+                            LandmarkId = 34,
+                            Url = "\\landmarkImages\\October_War_Panorama\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 44,
+                            LandmarkId = 35,
+                            Url = "\\landmarkImages\\Egyptian_Pyramids\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 45,
+                            LandmarkId = 36,
+                            Url = "\\landmarkImages\\Citadel_of_Qaitbay\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 46,
+                            LandmarkId = 37,
+                            Url = "\\landmarkImages\\Qasr_El_Nil\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 47,
+                            LandmarkId = 38,
+                            Url = "\\landmarkImages\\Royal_Jewelry_Museum\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 48,
+                            LandmarkId = 39,
+                            Url = "\\landmarkImages\\Saint_Catherine\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 49,
+                            LandmarkId = 40,
+                            Url = "\\landmarkImages\\Saqqara\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 50,
+                            LandmarkId = 41,
+                            Url = "\\landmarkImages\\Sphinx\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 51,
+                            LandmarkId = 42,
+                            Url = "\\landmarkImages\\Mosque-Madrasa_of_Sultan_Hassan\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 52,
+                            LandmarkId = 43,
+                            Url = "\\landmarkImages\\Roman_Amphitheatre_in_Alexandria\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 53,
+                            LandmarkId = 44,
+                            Url = "\\landmarkImages\\Temple_of_Derr\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 54,
+                            LandmarkId = 45,
+                            Url = "\\landmarkImages\\Valley_of_the_Kings\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 55,
+                            LandmarkId = 46,
+                            Url = "\\landmarkImages\\White_Desert\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 56,
+                            LandmarkId = 47,
+                            Url = "\\landmarkImages\\Kalabsha_Temple\\1.jpg"
                         });
                 });
 
