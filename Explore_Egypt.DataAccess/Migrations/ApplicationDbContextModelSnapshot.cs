@@ -1180,18 +1180,26 @@ namespace Explore_Egypt.DataAccess.Migrations
 
             modelBuilder.Entity("Explore_Egypt.Models.SearchHistory", b =>
                 {
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("Date")
+                        .HasColumnType("datetime2");
 
                     b.Property<int?>("LandmarkID")
                         .HasColumnType("int");
 
-                    b.Property<TimeOnly?>("Date")
-                        .HasColumnType("time");
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.HasKey("UserId", "LandmarkID");
+                    b.HasKey("Id");
 
                     b.HasIndex("LandmarkID");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("SearchHistory");
                 });
@@ -1363,15 +1371,11 @@ namespace Explore_Egypt.DataAccess.Migrations
                 {
                     b.HasOne("Explore_Egypt.Models.Landmark", "Landmark")
                         .WithMany("SearchHistories")
-                        .HasForeignKey("LandmarkID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("LandmarkID");
 
                     b.HasOne("Explore_Egypt.Models.ApplicationUser", "User")
                         .WithMany("SearchHistories")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Landmark");
 

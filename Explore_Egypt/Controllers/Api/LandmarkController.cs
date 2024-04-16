@@ -29,17 +29,17 @@ namespace Explore_Egypt.Controllers.Api
 		}
 
 		//https://localhost:44316/api/landmark/name/{landmarkName}
-		//e.g. https://localhost:44316/api/landmark/name/cairo-tower
+		//e.g. https://localhost:44316/api/landmark/name/cairotower
 		[HttpGet("name/{landmarkName}", Name = "GetLandmarkByName")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
 		[ProducesResponseType(StatusCodes.Status400BadRequest)]
-		public ActionResult<IEnumerable<Landmark>> GetLandmark([FromRoute(Name = "landmarkName")] string name)
+		public ActionResult<IEnumerable<Landmark>> GetLandmark([FromRoute(Name = "landmarkName")] string name, [FromBody] string userId)
 		{
-			if (name == null)
+			if (name == null || userId == null || !_context.Users.Any(x => x.Id == userId))
 				return BadRequest();
 
-			var landmark = _context.Landmarks.FirstOrDefault(x => x.Name == name);
+			var landmark = _context.Landmarks.FirstOrDefault(x => x.Name.Contains(name));
 			if (landmark == null)
 				return NotFound();
 
@@ -58,7 +58,13 @@ namespace Explore_Egypt.Controllers.Api
 				Longitude = landmark.Longitude,
 				ImagesUrl = _context.LandmarkImages.Where(x => x.LandmarkId == landmark.Id).Select(x => x.Url).ToList()
 			};
-
+			_context.SearchHistory.Add(new SearchHistory
+			{
+				LandmarkID = landmark.Id,
+				UserId = userId,
+				Date = DateTime.Now
+			});
+			_context.SaveChanges();
 			return Ok(new { data = landmarkDto });
 		}
 
