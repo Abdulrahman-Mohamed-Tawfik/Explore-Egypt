@@ -998,6 +998,12 @@ namespace Explore_Egypt.DataAccess.Migrations
                         },
                         new
                         {
+                            Id = 27,
+                            LandmarkId = 21,
+                            Url = "\\landmarkImages\\Montaza_Palace\\1.jpg"
+                        },
+                        new
+                        {
                             Id = 28,
                             LandmarkId = 18,
                             Url = "\\landmarkImages\\Al-Azhar_Mosque\\1.jpg"
@@ -1013,6 +1019,162 @@ namespace Explore_Egypt.DataAccess.Migrations
                             Id = 30,
                             LandmarkId = 20,
                             Url = "\\landmarkImages\\Al-Hussein_Mosque\\2.jpg"
+                        },
+                        new
+                        {
+                            Id = 31,
+                            LandmarkId = 22,
+                            Url = "\\landmarkImages\\Philae_Temple\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 32,
+                            LandmarkId = 23,
+                            Url = "\\landmarkImages\\Hanging_Church\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 33,
+                            LandmarkId = 24,
+                            Url = "\\landmarkImages\\Ibn_Tulun_Mosque\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 34,
+                            LandmarkId = 25,
+                            Url = "\\landmarkImages\\Statue_of_Ibrahim_Pasha\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 35,
+                            LandmarkId = 26,
+                            Url = "\\landmarkImages\\Karnak\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 36,
+                            LandmarkId = 27,
+                            Url = "\\landmarkImages\\Temple_of_Khnum\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 37,
+                            LandmarkId = 28,
+                            Url = "\\landmarkImages\\Kom_Ombo_Temple\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 38,
+                            LandmarkId = 29,
+                            Url = "\\landmarkImages\\Luxor_Temple\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 39,
+                            LandmarkId = 30,
+                            Url = "\\landmarkImages\\Mosque_of_Muhammad_Ali\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 40,
+                            LandmarkId = 31,
+                            Url = "\\landmarkImages\\Mostafa_Kamel_Museum\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 41,
+                            LandmarkId = 32,
+                            Url = "\\landmarkImages\\Museum_of_Islamic_Arts\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 42,
+                            LandmarkId = 33,
+                            Url = "\\landmarkImages\\Egypt_s_Renaissance_Statue\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 43,
+                            LandmarkId = 34,
+                            Url = "\\landmarkImages\\October_War_Panorama\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 44,
+                            LandmarkId = 35,
+                            Url = "\\landmarkImages\\Egyptian_Pyramids\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 45,
+                            LandmarkId = 36,
+                            Url = "\\landmarkImages\\Citadel_of_Qaitbay\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 46,
+                            LandmarkId = 37,
+                            Url = "\\landmarkImages\\Qasr_El_Nil\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 47,
+                            LandmarkId = 38,
+                            Url = "\\landmarkImages\\Royal_Jewelry_Museum\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 48,
+                            LandmarkId = 39,
+                            Url = "\\landmarkImages\\Saint_Catherine\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 49,
+                            LandmarkId = 40,
+                            Url = "\\landmarkImages\\Saqqara\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 50,
+                            LandmarkId = 41,
+                            Url = "\\landmarkImages\\Sphinx\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 51,
+                            LandmarkId = 42,
+                            Url = "\\landmarkImages\\Mosque-Madrasa_of_Sultan_Hassan\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 52,
+                            LandmarkId = 43,
+                            Url = "\\landmarkImages\\Roman_Amphitheatre_in_Alexandria\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 53,
+                            LandmarkId = 44,
+                            Url = "\\landmarkImages\\Temple_of_Derr\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 54,
+                            LandmarkId = 45,
+                            Url = "\\landmarkImages\\Valley_of_the_Kings\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 55,
+                            LandmarkId = 46,
+                            Url = "\\landmarkImages\\White_Desert\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 56,
+                            LandmarkId = 47,
+                            Url = "\\landmarkImages\\Kalabsha_Temple\\1.jpg"
                         });
                 });
 
