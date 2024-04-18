@@ -50,37 +50,52 @@ namespace Explore_Egypt.Controllers
         }
 
 
-		public IActionResult Edit(int? id)
-		{
-			if (id == null || id == 0)
-			{
-				return NotFound();
-			}
-			//Landmark? LandmarksFromDb = _db.Landmarks.Get(u => u.Id == id);
-			Landmark? LandmarksFromDb = _db.Landmarks.Find(id);
-			//Landmarks? LandmarksFromDb1 = _db.Categories.FirstOrDefault(u=>u.Id==id);
-			//Landmarks? LandmarksFromDb2 = _db.Categories.Where(u=>u.Id==id).FirstOrDefault();
+        public IActionResult Edit(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            Landmark? LandmarksFromDb = _db.Landmarks.Find(id);
 
-			if (LandmarksFromDb == null)
-			{
-				return NotFound();
-			}
-			return View(LandmarksFromDb);
-		}
-		[HttpPost]
-		public IActionResult Edit(Landmark obj)
-		{
-			if (ModelState.IsValid)
-			{
-				_db.Landmarks.Update(obj);
-				_db.SaveChanges();
-				TempData["success"] = "Landmarks updated successfully";
-				return RedirectToAction("Index");
-			}
-			return View();
 
-		}
+            if (LandmarksFromDb == null)
+            {
+                return NotFound();
+            }
+            return View(LandmarksFromDb);
+        }
+        [HttpPost]
+        public IActionResult Edit(Landmark obj, IFormFile file)
+        {
+            if (ModelState.IsValid)
+            {
+                /*
+                if (file != null && file.Length > 0)
+                {
+                    // Save the file to a location on the server
+                    var filePath = Path.Combine(_hostingEnvironment.WebRootPath, "uploads", file.FileName);
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        file.CopyTo(stream);
+                    }
 
-		
-	}
+                    // Generate URL for the uploaded file
+                    var url = Url.Content("~/uploads/" + file.FileName);
+
+                    // Update the Landmark object with the URL
+                    obj.Images = url;
+                }
+                */
+                _db.Landmarks.Update(obj);
+                _db.SaveChanges();
+                TempData["success"] = "Landmarks updated successfully";
+                return RedirectToAction("Index");
+            }
+            return View();
+
+        }
+
+
+    }
 }
