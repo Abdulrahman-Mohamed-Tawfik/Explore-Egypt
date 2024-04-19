@@ -148,43 +148,9 @@ namespace Explore_Egypt.Controllers
 			}
 			return View();
 
-
-            if (LandmarksFromDb == null)
-            {
-                return NotFound();
-            }
-            return View(LandmarksFromDb);
+            
         }
-        [HttpPost]
-        public IActionResult Edit(Landmark obj, IFormFile file)
-        {
-            if (ModelState.IsValid)
-            {
-                /*
-                if (file != null && file.Length > 0)
-                {
-                    // Save the file to a location on the server
-                    var filePath = Path.Combine(_hostingEnvironment.WebRootPath, "uploads", file.FileName);
-                    using (var stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        file.CopyTo(stream);
-                    }
-
-                    // Generate URL for the uploaded file
-                    var url = Url.Content("~/uploads/" + file.FileName);
-
-                    // Update the Landmark object with the URL
-                    obj.Images = url;
-                }
-                */
-                _db.Landmarks.Update(obj);
-                _db.SaveChanges();
-                TempData["success"] = "Landmarks updated successfully";
-                return RedirectToAction("Index");
-            }
-            return View();
-
-        }
+        
 
 
 
