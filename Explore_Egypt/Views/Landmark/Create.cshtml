@@ -9,7 +9,9 @@
 		</div>
 	</div>
 	<div class="card-body p-4">
-		<form method="post" class="row">
+		<form method="post" class="row" enctype="multipart/form-data">
+			@* <input asp-for="Id" hidden />
+			<input asp-for="Images" hidden /> *@
 			<div class="border p-3">
 				<div asp-validation-summary="All"></div>
 				<div class="form-floating py-2 col-12">
@@ -72,7 +74,9 @@
 					<span asp-validation-for="ForeignStudentTicketPrice" class="text-danger"></span>
 				</div>
 				<div class="form-floating py-2 col-12">
-					<input asp-for="Images" type="file" name="file" class="form-control border-0 shadow" />
+
+					<input type="file" name="files" class="form-control border-0 shadow" multiple />
+
 					<label asp-for="Images" class="ms-2"></label>
 				</div>
 				<div class="row pt-2">
