@@ -1,6 +1,7 @@
 ﻿using Explore_Egypt.DataAccess.Data;
 using Explore_Egypt.DataAccess.Dto;
 using Explore_Egypt.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -13,12 +14,15 @@ namespace Explore_Egypt.Controllers.Api
 	public class LandmarkController : ControllerBase
 	{
 		private readonly ApplicationDbContext _context;
-		public LandmarkController(ApplicationDbContext context)
-		{
-			_context = context;
-		}
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-		[HttpGet]
+        public LandmarkController(ApplicationDbContext context, IWebHostEnvironment webHostEnvironment)
+        {
+            _context = context;
+            _webHostEnvironment = webHostEnvironment;
+        }
+
+        [HttpGet]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		public ActionResult<IEnumerable<Landmark>> GetLandmarks()
 		{
@@ -84,12 +88,19 @@ namespace Explore_Egypt.Controllers.Api
             {
                 return NotFound(new { success = false, message = "Error while deleting" });
             }
-            //var oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath,LandmarkToBeDeleted.ImageUrl.TrimStart('\\'));
+            string landmarkPath = @"landmarkImages\" + LandmarkToBeDeleted.Name.Replace(' ', '-');
+            string finalPath = Path.Combine(_webHostEnvironment.WebRootPath, landmarkPath);
 
-            //if (System.IO.File.Exists(oldImagePath))
-            //{
-            //	System.IO.File.Delete(oldImagePath);
-            //}
+            if (Directory.Exists(finalPath))
+            {
+                string[] filePaths = Directory.GetFiles(finalPath);
+                foreach (string filePath in filePaths)
+                {
+                    System.IO.File.Delete(filePath);
+                }
+
+                Directory.Delete(finalPath);
+            }
 
             _context.Landmarks.Remove(LandmarkToBeDeleted);
             _context.SaveChanges();
