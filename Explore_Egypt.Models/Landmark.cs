@@ -36,7 +36,8 @@ namespace Explore_Egypt.Models
         public double Longitude { get; set; }
         [Required]
         public double Latitude { get; set; }
-
+        [NotMapped] 
+        public double DistanceFromUser { get; set; }
         [ValidateNever]
         public ICollection<LandmarkImage>? Images { get; set; }
         [ValidateNever]
