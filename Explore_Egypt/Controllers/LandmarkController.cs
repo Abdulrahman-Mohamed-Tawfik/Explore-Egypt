@@ -4,6 +4,7 @@ using Explore_Egypt.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Explore_Egypt.Controllers
 {
@@ -11,9 +12,12 @@ namespace Explore_Egypt.Controllers
     public class LandmarkController : Controller
     {
         private readonly ApplicationDbContext _db;
-        public LandmarkController(ApplicationDbContext db)
+        private readonly IWebHostEnvironment _webHostEnvironment;
+
+        public LandmarkController(ApplicationDbContext db, IWebHostEnvironment webHostEnvironment)
         {
             _db = db;
+            _webHostEnvironment = webHostEnvironment;
         }
         public IActionResult Index()
         {
@@ -25,7 +29,7 @@ namespace Explore_Egypt.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(Landmark obj)
+        public IActionResult Create(Landmark obj, List<IFormFile> files)
         {
             //if (obj.Name == obj.Id.ToString())
             //{
@@ -41,13 +45,46 @@ namespace Explore_Egypt.Controllers
             //}
             if (ModelState.IsValid)
             {
-                _db.Landmarks.Add(obj);
+				_db.Landmarks.Add(obj);
+				_db.SaveChanges();
+
+				string wwwRootPath = _webHostEnvironment.WebRootPath;
+                if (files != null)
+                {
+
+                    foreach (IFormFile file in files)
+                    {
+                        string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                        string landmarkPath = @"landmarkImages\" + obj.Name.Replace(' ', '-');
+                        string finalPath = Path.Combine(wwwRootPath, landmarkPath);
+
+                        if (!Directory.Exists(finalPath))
+                            Directory.CreateDirectory(finalPath);
+
+                        using (var fileStream = new FileStream(Path.Combine(finalPath, fileName), FileMode.Create))
+                        {
+                            file.CopyTo(fileStream);
+                        }
+
+                        int landmarkId = _db.Landmarks.OrderBy(x => x.Id).Last().Id;
+                        LandmarkImage landmarkImage = new()
+                        {
+                            Url = @"\" + landmarkPath + @"\" + fileName,
+                            LandmarkId = landmarkId,
+                        };
+                        _db.LandmarkImages.Add(landmarkImage);
+                        
+                    }
+                }
+
+                
                 _db.SaveChanges();
                 TempData["success"] = "Landmarks created successfully";
                 return RedirectToAction("Index");
             }
             return View();
         }
+
 
 
 		public IActionResult Edit(int? id)
@@ -57,7 +94,8 @@ namespace Explore_Egypt.Controllers
 				return NotFound();
 			}
 			//Landmark? LandmarksFromDb = _db.Landmarks.Get(u => u.Id == id);
-			Landmark? LandmarksFromDb = _db.Landmarks.Find(id);
+			Landmark? LandmarksFromDb = _db.Landmarks.Include(x => x.Images)
+                    .FirstOrDefault(x => x.Id == id);
 			//Landmarks? LandmarksFromDb1 = _db.Categories.FirstOrDefault(u=>u.Id==id);
 			//Landmarks? LandmarksFromDb2 = _db.Categories.Where(u=>u.Id==id).FirstOrDefault();
 
@@ -68,19 +106,82 @@ namespace Explore_Egypt.Controllers
 			return View(LandmarksFromDb);
 		}
 		[HttpPost]
-		public IActionResult Edit(Landmark obj)
+		public IActionResult Edit(Landmark obj, List<IFormFile> files)
 		{
 			if (ModelState.IsValid)
 			{
 				_db.Landmarks.Update(obj);
 				_db.SaveChanges();
-				TempData["success"] = "Landmarks updated successfully";
+
+                string wwwRootPath = _webHostEnvironment.WebRootPath;
+                if (files != null)
+                {
+
+                    foreach (IFormFile file in files)
+                    {
+                        string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                        string landmarkPath = @"landmarkImages\" + obj.Name.Replace(' ', '-');
+                        string finalPath = Path.Combine(wwwRootPath, landmarkPath);
+
+                        if (!Directory.Exists(finalPath))
+                            Directory.CreateDirectory(finalPath);
+
+                        using (var fileStream = new FileStream(Path.Combine(finalPath, fileName), FileMode.Create))
+                        {
+                            file.CopyTo(fileStream);
+                        }
+
+                        int landmarkId = _db.Landmarks.OrderBy(x => x.Id).Last().Id;
+                        LandmarkImage landmarkImage = new()
+                        {
+                            Url = @"\" + landmarkPath + @"\" + fileName,
+                            LandmarkId = landmarkId,
+                        };
+                        _db.LandmarkImages.Add(landmarkImage);
+
+                    }
+                }
+
+                _db.SaveChanges();
+                TempData["success"] = "Landmarks updated successfully";
 				return RedirectToAction("Index");
 			}
 			return View();
 
-		}
+            
+        }
+        
 
-		
-	}
+
+
+        public IActionResult DeleteImage(int imageId)
+        {
+            var imageToBeDeleted = _db.LandmarkImages.FirstOrDefault(u => u.Id == imageId);
+            int landmarkId = imageToBeDeleted.LandmarkId;
+            if (imageToBeDeleted != null)
+            {
+                if (!string.IsNullOrEmpty(imageToBeDeleted.Url))
+                {
+                    var oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath,
+                                   imageToBeDeleted.Url.TrimStart('\\'));
+
+                    if (System.IO.File.Exists(oldImagePath))
+                    {
+                        System.IO.File.Delete(oldImagePath);
+                    }
+                }
+
+                _db.LandmarkImages.Remove(imageToBeDeleted);
+                _db.SaveChanges();
+
+                TempData["success"] = "Deleted successfully";
+            }
+
+            return RedirectToAction("Edit", new { id = landmarkId });
+
+        }
+
+
+
+    }
 }

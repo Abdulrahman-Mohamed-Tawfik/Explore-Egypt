@@ -13,11 +13,26 @@ function loadDataTable() {
         "columns": [
             { data: 'id' },
             { data: 'name' },
-            { data: 'description' },
+            {
+                data: 'description',
+                "render": function (data) {
+                    return data.length > 20 ? data.substr(0, 20) + '...' : data;
+                }
+            },
             { data: 'openTime' },
             { data: 'closeTime' },
-            { data: 'latitude' },
-            { data: 'longitude' },
+            {
+                data: 'latitude',
+                "render": function (data) {
+                    return data.toFixed(2); // Display latitude with 2 decimal places
+                }
+            },
+            {
+                data: 'longitude',
+                "render": function (data) {
+                    return data.toFixed(2); // Display longitude with 2 decimal places
+                }
+            },
             { data: 'egyptianTicketPrice' },
             { data: 'egyptianStudentTicketPrice' },
             { data: 'foreignTicketPrice' },

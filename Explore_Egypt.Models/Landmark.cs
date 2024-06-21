@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Explore_Egypt.Models
@@ -35,9 +36,13 @@ namespace Explore_Egypt.Models
         public double Longitude { get; set; }
         [Required]
         public double Latitude { get; set; }
-
+        [NotMapped] 
+        public double DistanceFromUser { get; set; }
+        [ValidateNever]
         public ICollection<LandmarkImage>? Images { get; set; }
+        [ValidateNever]
         public ICollection<Favour>? Favourites {  get; set; }
+        [ValidateNever]
         public ICollection<SearchHistory>? SearchHistories { get; set; }
     }
 }

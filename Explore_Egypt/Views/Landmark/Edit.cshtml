@@ -8,75 +8,93 @@
         </div>
     </div>
     <div class="card-body p-4">
-        <form method="post">
+        <form method="post" class="row" enctype="multipart/form-data">
             <input asp-for="Id" hidden />
-            <div class="border p-3 mt-4">
-                <div asp-validation-summary="All"></div>
-                <div class="form-floating py-2 col-12">
-                    <input asp-for="Name" class="form-control border-0 shadow" />
-                    <label asp-for="Name" class="ms-2"></label>
-                    <span asp-validation-for="Name" class="text-danger"></span>
-                </div>
-                <div class=" py-2 col-12">
-                    <label asp-for="Description" class="ms-2 text-muted"></label>
-                    <textarea asp-for="Description" class="form-control border-0 shadow"></textarea>
-                </div>
-                <div class="form-floating py-2 col-12">
-                    <input asp-for="OpenTime" class="form-control border-0 shadow" id="openTime" />
-                    <label asp-for="OpenTime" class="ms-2">Open time</label>
-                    <span asp-validation-for="OpenTime" class="text-danger"></span>
-                </div>
-                <div class="form-floating py-2 col-12">
-                    <input asp-for="CloseTime" class="form-control border-0 shadow" id="closeTime" />
-                    <label asp-for="CloseTime" class="ms-2">Close time</label>
-                    <span asp-validation-for="CloseTime" class="text-danger"></span>
-                </div>
-                <div class="form-floating py-2 col-12">
-                    <input asp-for="Latitude" class="form-control border-0 shadow" />
-                    <label asp-for="Latitude" class="ms-2"></label>
-                    <span asp-validation-for="Latitude" class="text-danger"></span>
-                </div>
-                <div class="form-floating py-2 col-12">
-                    <input asp-for="Longitude " class="form-control border-0 shadow" />
-                    <label asp-for="Longitude" class="ms-2"></label>
-                    <span asp-validation-for="Longitude" class="text-danger"></span>
-                </div>
-                <div class="form-floating py-2 col-12">
-                    <input asp-for="EgyptianTicketPrice" class="form-control border-0 shadow" />
-                    <label asp-for="EgyptianTicketPrice" class="ms-2"></label>
-                    <span asp-validation-for="EgyptianTicketPrice" class="text-danger"></span>
-                </div>
-                <div class="form-floating py-2 col-12">
-                    <input asp-for="EgyptianStudentTicketPrice" class="form-control border-0 shadow" />
-                    <label asp-for="EgyptianStudentTicketPrice" class="ms-2"></label>
-                    <span asp-validation-for="EgyptianStudentTicketPrice" class="text-danger"></span>
-                </div>
-                <div class="form-floating py-2 col-12">
-                    <input asp-for="ForeignTicketPrice" class="form-control border-0 shadow" />
-                    <label asp-for="ForeignTicketPrice" class="ms-2"></label>
-                    <span asp-validation-for="ForeignTicketPrice" class="text-danger"></span>
-                </div>
-                <div class="form-floating py-2 col-12">
-                    <input asp-for="ForeignStudentTicketPrice" class="form-control border-0 shadow" />
-                    <label asp-for="ForeignStudentTicketPrice" class="ms-2"></label>
-                    <span asp-validation-for="ForeignStudentTicketPrice" class="text-danger"></span>
-                </div>
-                <div class="form-floating py-2 col-12">
-                    <input type="file" name="file" class="form-control border-0 shadow" />
-                    <label asp-for="Images" class="ms-2"></label>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-6 col-md-3">
-                        <button type="submit" class="btn btn-primary form-control">Update</button>
+            <div class="row">
+                <div class="col-10">
+                    <div class="border p-3 mt-4">
+                        <div asp-validation-summary="All"></div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="Name" class="form-control border-0 shadow" />
+                            <label asp-for="Name" class="ms-2"></label>
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class=" py-2 col-12">
+                            <label asp-for="Description" class="ms-2 text-muted"></label>
+                            <textarea asp-for="Description" class="form-control border-0 shadow"></textarea>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="OpenTime" class="form-control border-0 shadow" id="openTime" />
+                            <label asp-for="OpenTime" class="ms-2">Open time</label>
+                            <span asp-validation-for="OpenTime" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="CloseTime" class="form-control border-0 shadow" id="closeTime" />
+                            <label asp-for="CloseTime" class="ms-2">Close time</label>
+                            <span asp-validation-for="CloseTime" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="Latitude" class="form-control border-0 shadow" />
+                            <label asp-for="Latitude" class="ms-2"></label>
+                            <span asp-validation-for="Latitude" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="Longitude " class="form-control border-0 shadow" />
+                            <label asp-for="Longitude" class="ms-2"></label>
+                            <span asp-validation-for="Longitude" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="EgyptianTicketPrice" class="form-control border-0 shadow" />
+                            <label asp-for="EgyptianTicketPrice" class="ms-2"></label>
+                            <span asp-validation-for="EgyptianTicketPrice" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="EgyptianStudentTicketPrice" class="form-control border-0 shadow" />
+                            <label asp-for="EgyptianStudentTicketPrice" class="ms-2"></label>
+                            <span asp-validation-for="EgyptianStudentTicketPrice" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="ForeignTicketPrice" class="form-control border-0 shadow" />
+                            <label asp-for="ForeignTicketPrice" class="ms-2"></label>
+                            <span asp-validation-for="ForeignTicketPrice" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="ForeignStudentTicketPrice" class="form-control border-0 shadow" />
+                            <label asp-for="ForeignStudentTicketPrice" class="ms-2"></label>
+                            <span asp-validation-for="ForeignStudentTicketPrice" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input type="file" name="files" class="form-control border-0 shadow" multiple />
+                            <label asp-for="Images" class="ms-2"></label>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-6 col-md-3">
+                                <button type="submit" class="btn btn-primary form-control">Update</button>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <a asp-controller="Landmark" asp-action="Index" class="btn btn-secondary border  form-control">
+                                    Back to List
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-6 col-md-3">
-                        <a asp-controller="Landmark" asp-action="Index" class="btn btn-secondary border  form-control">
-                            Back to List
-                        </a>
-                    </div>
+                    
                 </div>
-
-
+                <div class="col-2">
+                    @if (Model.Images != null)
+                    {
+                        foreach (var image in Model.Images)
+                        {
+                            <div class="border p-1 m-2 text-center">
+                                <img src="@image.Url" width="100%"
+                                     style="border-radius:5px; border:1px solid #bbb9b9" />
+                                <a asp-action="DeleteImage" class="btn btn-danger" asp-route-imageId="@image.Id">
+                                    <i class="bi bi-trash-fill"></i> Delete
+                                </a>
+                            </div>
+                        }
+                    }
+                </div>
             </div>
         </form>
     </div>
