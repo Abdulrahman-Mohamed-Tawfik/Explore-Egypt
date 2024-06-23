@@ -4,6 +4,7 @@ using Explore_Egypt.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Explore_Egypt.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240623173610_ReplacedOldSitesWithNewOnes")]
+    partial class ReplacedOldSitesWithNewOnes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -412,6 +415,20 @@ namespace Explore_Egypt.DataAccess.Migrations
                         },
                         new
                         {
+                            Id = 19,
+                            CloseTime = new TimeOnly(18, 0, 0),
+                            Description = "The Temple of Gerf Hussein is an ancient Egyptian temple located in Upper Nubia, near the Sudanese border. It was relocated during the construction of the Aswan High Dam. The temple was dedicated to the Nubian deity Dedun and was built during the reign of Ramses II. It features well-preserved reliefs depicting Ramses II and various religious scenes. The Temple of Gerf Hussein offers a glimpse into the ancient Egyptian presence in Nubia and the cultural exchange between the two regions.\r\n\r\n\r\n\r\n\r\n",
+                            EgyptianStudentTicketPrice = 0.0m,
+                            EgyptianTicketPrice = 0.0m,
+                            ForeignStudentTicketPrice = 0.0m,
+                            ForeignTicketPrice = 0.0m,
+                            Latitude = 23.960170000000002,
+                            Longitude = 32.867649999999998,
+                            Name = "Temple of Gerf Hussein",
+                            OpenTime = new TimeOnly(6, 0, 0)
+                        },
+                        new
+                        {
                             Id = 20,
                             CloseTime = new TimeOnly(9, 0, 0),
                             Description = "The El-Hussein Mosque is a historic mosque located in Cairo, Egypt. It is named after Hussein ibn Ali, the grandson of Prophet Muhammad. The mosque is considered a sacred site and holds religious significance for the Shia Muslim community. It features a beautiful courtyard, minarets, and a dome. The mosque is known for its intricate architectural details and is a popular destination for worshippers and visitors seeking spiritual solace. The El-Hussein Mosque stands as a symbol of religious devotion and cultural heritage in Cairo.\r\n\r\n\r\n\r\n\r\n",
@@ -507,6 +524,20 @@ namespace Explore_Egypt.DataAccess.Migrations
                             Longitude = 32.6572905586685,
                             Name = "Karnak",
                             OpenTime = new TimeOnly(6, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 27,
+                            CloseTime = new TimeOnly(17, 0, 0),
+                            Description = "Khnum Temple, located in Esna, Egypt, is an ancient Egyptian temple dedicated to the god Khnum. It was constructed during the Ptolemaic and Roman periods. The temple features well-preserved reliefs and carvings depicting scenes from ancient Egyptian mythology and religious rituals. Its hypostyle hall is notable for its intricately decorated columns. Khnum Temple is a significant archaeological site that offers insight into the religious practices and beliefs of ancient Egypt.",
+                            EgyptianStudentTicketPrice = 10.0m,
+                            EgyptianTicketPrice = 20.0m,
+                            ForeignStudentTicketPrice = 40.0m,
+                            ForeignTicketPrice = 80.0m,
+                            Latitude = 25.293655331805802,
+                            Longitude = 32.556101992752097,
+                            Name = "Temple of Khnum",
+                            OpenTime = new TimeOnly(8, 0, 0)
                         },
                         new
                         {
@@ -731,6 +762,20 @@ namespace Explore_Egypt.DataAccess.Migrations
                             Longitude = 29.904027937707699,
                             Name = "Roman Amphitheatre in Alexandria",
                             OpenTime = new TimeOnly(9, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 44,
+                            CloseTime = new TimeOnly(16, 0, 0),
+                            Description = "The Temple of Derr is an ancient Egyptian temple located in Lower Nubia, now submerged under Lake Nasser due to the construction of the Aswan High Dam. It was dedicated to the god Amun and was built during the reign of Ramses II. The temple featured stunning reliefs depicting Ramses II and scenes from his military campaigns. Prior to the dam's construction, the temple was dismantled and relocated to its current location on the island of New Kalabsha. The Temple of Derr represents the efforts to preserve and relocate ancient Egyptian monuments threatened by modern development.",
+                            EgyptianStudentTicketPrice = 0.0m,
+                            EgyptianTicketPrice = 0.0m,
+                            ForeignStudentTicketPrice = 0.0m,
+                            ForeignTicketPrice = 0.0m,
+                            Latitude = 22.732407869652,
+                            Longitude = 32.262263849806999,
+                            Name = "Temple of Derr",
+                            OpenTime = new TimeOnly(7, 0, 0)
                         },
                         new
                         {
@@ -968,6 +1013,12 @@ namespace Explore_Egypt.DataAccess.Migrations
                         },
                         new
                         {
+                            Id = 29,
+                            LandmarkId = 19,
+                            Url = "\\landmarkImages\\Temple_of_Gerf_Hussein\\1.jpg"
+                        },
+                        new
+                        {
                             Id = 30,
                             LandmarkId = 20,
                             Url = "\\landmarkImages\\Al-Hussein_Mosque\\2.jpg"
@@ -1001,6 +1052,12 @@ namespace Explore_Egypt.DataAccess.Migrations
                             Id = 35,
                             LandmarkId = 26,
                             Url = "\\landmarkImages\\Karnak\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 36,
+                            LandmarkId = 27,
+                            Url = "\\landmarkImages\\Temple_of_Khnum\\1.jpg"
                         },
                         new
                         {
@@ -1097,6 +1154,12 @@ namespace Explore_Egypt.DataAccess.Migrations
                             Id = 52,
                             LandmarkId = 43,
                             Url = "\\landmarkImages\\Roman_Amphitheatre_in_Alexandria\\1.jpg"
+                        },
+                        new
+                        {
+                            Id = 53,
+                            LandmarkId = 44,
+                            Url = "\\landmarkImages\\Temple_of_Derr\\1.jpg"
                         },
                         new
                         {
