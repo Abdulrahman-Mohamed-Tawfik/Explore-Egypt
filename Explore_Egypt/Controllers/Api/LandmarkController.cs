@@ -259,6 +259,50 @@ namespace Explore_Egypt.Controllers.Api
                 return NotFound();  
             }
         }
+
+        /*
+         SQL Code to get the Top10SearchLandmarks:
+            SELECT COUNT(*) AS 'Count', LandmarkID
+            FROM SearchHistory
+            GROUP BY LandmarkID
+            ORDER BY Count DESC
+         */
+        //https://localhost:44316/api/landmark/Top10SearchLandmarks
+        [HttpGet("Top10SearchLandmarks")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public ActionResult<IEnumerable<Landmark>> GetTop10SearchLandmarks()
+        {
+            if (_context.SearchHistory == null || _context.SearchHistory == null)
+                return BadRequest(new { msg = "no enough data" });
+
+            var landmarks = _context.SearchHistory.GroupBy(sh => sh.LandmarkID)
+                                                .Select(g => new { LandmarkID = g.Key, Count = g.Count() })
+                                                .OrderByDescending(g => g.Count)
+                                                .Select(x => _context.Landmarks.FirstOrDefault(l => l.Id == x.LandmarkID))
+                                                .ToList();
+            return Ok(new { data = landmarks });
+
+        }
+
+        //https://localhost:44316/api/landmark/Top10FavoriteLandmarks
+        [HttpGet("Top10FavoriteLandmarks")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public ActionResult<IEnumerable<Landmark>> GetTop10FavoriteLandmarks()
+        {
+            if (_context.Favours == null || _context.SearchHistory == null)
+                return BadRequest(new { msg = "no enough data" });
+
+            var landmarks = _context.Favours.GroupBy(sh => sh.LandmarkID)
+                                          .Select(g => new { LandmarkID = g.Key, Count = g.Count() })
+                                          .OrderByDescending(g => g.Count)
+                                          .Select(x => _context.Landmarks.FirstOrDefault(l => l.Id == x.LandmarkID))
+                                          .ToList();
+            return Ok(new { data = landmarks });
+
+        }
+
         [HttpPost("predict", Name = "PreicateLandmarkNameFromImage")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
